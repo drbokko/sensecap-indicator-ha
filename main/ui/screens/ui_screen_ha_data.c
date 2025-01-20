@@ -170,7 +170,7 @@ ui_sensor3_btn1 = lv_btn_create(ui_screen_ha_data);
 lv_obj_set_width( ui_sensor3_btn1, 214);
 lv_obj_set_height( ui_sensor3_btn1, 120);
 lv_obj_set_x( ui_sensor3_btn1, 21 );
-lv_obj_set_y( ui_sensor3_btn1, 341 );
+lv_obj_set_y( ui_sensor3_btn1, 207 );
 lv_obj_add_flag( ui_sensor3_btn1, LV_OBJ_FLAG_SCROLL_ON_FOCUS );   /// Flags
 lv_obj_clear_flag( ui_sensor3_btn1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 lv_obj_set_style_radius(ui_sensor3_btn1, 12, LV_PART_MAIN| LV_STATE_DEFAULT);
@@ -275,7 +275,7 @@ ui_sensor5_btn1 = lv_btn_create(ui_screen_ha_data);
 lv_obj_set_width( ui_sensor5_btn1, 214);
 lv_obj_set_height( ui_sensor5_btn1, 120);
 lv_obj_set_x( ui_sensor5_btn1, 21 );
-lv_obj_set_y( ui_sensor5_btn1, 206 );
+lv_obj_set_y( ui_sensor5_btn1, 339 );
 lv_obj_add_flag( ui_sensor5_btn1, LV_OBJ_FLAG_SCROLL_ON_FOCUS );   /// Flags
 lv_obj_clear_flag( ui_sensor5_btn1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 lv_obj_set_style_radius(ui_sensor5_btn1, 12, LV_PART_MAIN| LV_STATE_DEFAULT);

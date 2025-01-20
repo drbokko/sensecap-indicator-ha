@@ -409,6 +409,12 @@
                 "InheritedType": 1
               },
               {
+                "nid": 100,
+                "strtype": "OBJECT/Hidden",
+                "strval": "True",
+                "InheritedType": 2
+              },
+              {
                 "nid": -1245572212,
                 "strtype": "OBJECT/Checkable",
                 "strval": "True",
@@ -1159,6 +1165,12 @@
                 "nid": -708491103,
                 "strtype": "OBJECT/Flags",
                 "InheritedType": 1
+              },
+              {
+                "nid": 100,
+                "strtype": "OBJECT/Hidden",
+                "strval": "True",
+                "InheritedType": 2
               },
               {
                 "nid": 1290421261,
@@ -2090,6 +2102,12 @@
                 "nid": 1300129007,
                 "strtype": "OBJECT/Flags",
                 "InheritedType": 1
+              },
+              {
+                "nid": 100,
+                "strtype": "OBJECT/Hidden",
+                "strval": "True",
+                "InheritedType": 2
               },
               {
                 "nid": -668111303,
@@ -3193,7 +3211,7 @@
           }
         ],
         "isPage": true,
-        "editor_posx": 600,
+        "editor_posx": 2130,
         "editor_posy": -600,
         "dont_export": false,
         "locked": false,
@@ -6795,7 +6813,7 @@
                 "strtype": "OBJECT/Position",
                 "intarray": [
                   21,
-                  341
+                  207
                 ],
                 "InheritedType": 7
               },
@@ -8486,7 +8504,7 @@
                 "strtype": "OBJECT/Position",
                 "intarray": [
                   21,
-                  206
+                  339
                 ],
                 "InheritedType": 7
               },
@@ -8599,7 +8617,7 @@
           }
         ],
         "isPage": true,
-        "editor_posx": 1110,
+        "editor_posx": 600,
         "editor_posy": -600,
         "dont_export": false,
         "locked": false,
@@ -17505,7 +17523,7 @@
           }
         ],
         "isPage": true,
-        "editor_posx": 2130,
+        "editor_posx": 1110,
         "editor_posy": -600,
         "dont_export": false,
         "locked": false,
@@ -19047,7 +19065,7 @@
           }
         ],
         "isPage": true,
-        "editor_posx": 2640,
+        "editor_posx": 3150,
         "editor_posy": -600,
         "dont_export": false,
         "locked": false,
@@ -22707,7 +22725,7 @@
           }
         ],
         "isPage": true,
-        "editor_posx": 1230,
+        "editor_posx": 1740,
         "editor_posy": -1380,
         "dont_export": false,
         "locked": false,
@@ -25271,7 +25289,7 @@
           }
         ],
         "isPage": true,
-        "editor_posx": 1770,
+        "editor_posx": 2280,
         "editor_posy": -1380,
         "dont_export": false,
         "locked": false,
