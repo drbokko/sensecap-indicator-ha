@@ -170,6 +170,10 @@ int __sensor_data_parse_handle(uint8_t* p_data, ssize_t len) {
 			// ESP_LOGI(TAG, "PKT_TYPE_SENSOR_SCD41_CO2");
 			UpdateSensorData(SCD41_SENSOR_CO2, (p_data + 1));
 			break;
+		case PKT_TYPE_SENSOR_DFROBOT_OZONE_PPM:
+		    // ESP_LOGI(TAG, "PKT_TYPE_SENSOR_DFROBOT_OZONE_PPM");
+			UpdateSensorData(OZONE_SENSOR_PPM, (p_data + 1));
+			break;
 		case PKT_TYPE_SENSOR_SGP40_TVOC_INDEX:
 			// ESP_LOGI(TAG, "PKT_TYPE_SENSOR_SGP40_TVOC_INDEX");
 			UpdateSensorData(SGP40_SENSOR_TVOC, (p_data + 1));

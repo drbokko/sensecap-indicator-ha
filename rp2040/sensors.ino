@@ -14,10 +14,22 @@
 #include <VOCGasIndexAlgorithm.h>
 #include "indicator_rp2040.hpp"
 
+#include "DFRobot_OzoneSensor.h"
+#define COLLECT_NUMBER  20              // collect number, the collection range is 1-100
+/**
+ * select i2c device address 
+ *   OZONE_ADDRESS_0  0x70
+ *   OZONE_ADDRESS_1  0x71
+ *   OZONE_ADDRESS_2  0x72
+ *   OZONE_ADDRESS_3  0x73
+ */
+#define Ozone_IICAddress OZONE_ADDRESS_3
+
 /************************ instance  ****************************/
-AHT20             AHT;    // grove-sensor: humi & temp
-SensirionI2CSgp40 sgp40;  // tvoc
-SensirionI2CScd4x scd4x;  // co2
+AHT20               AHT;    // grove-sensor: humi & temp
+SensirionI2CSgp40   sgp40;  // tvoc
+SensirionI2CScd4x   scd4x;  // co2
+DFRobot_OzoneSensor Ozone;  // DFRobot Ozone Sensor
 
 /************************ Sensor Power ****************************/
 // The built-in sensor needs to be powered on
@@ -72,6 +84,32 @@ void sensor_data_send(PacketSerial& packetSerial, pkt_type type, float data)
 #endif
 }
 
+/************************ Ozone Sensor ************************************/
+void sensor_ozone_init(void)
+{
+  if(!Ozone.begin(Ozone_IICAddress)){
+    Serial.println("I2c device number error !");
+  }
+
+  Ozone.setModes(MEASURE_MODE_PASSIVE);
+}
+
+bool sensor_ozone_get(OzoneData& data)
+{
+    int16_t ozoneConcentration = Ozone.readOzoneData(COLLECT_NUMBER);
+    // Serial.println(ozoneConcentration);
+    data.rawppb = ozoneConcentration;
+    data.rawppm = ozoneConcentration * 0.001;
+
+    return true;
+}
+
+void sensor_ozone_print(const OzoneData& data)
+{
+    Serial.print("sensor O_3: Ozone concentration is ");
+    Serial.print(data.rawppm);
+    Serial.println(" ppm");
+}
 /************************ aht  temp & humidity ****************************/
 
 void sensor_aht_init(void)

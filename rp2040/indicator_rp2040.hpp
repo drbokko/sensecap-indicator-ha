@@ -34,6 +34,9 @@ enum pkt_type {
     
     // Inner Sensor SGP40
     PKT_TYPE_SENSOR_SGP40_TVOC_INDEX = 0xB5,  // float
+    
+    // External Ozone Sensor
+    PKT_TYPE_SENSOR_DFROBOT_OZONE_PPM = 0xD0 // float
 };
 
 void sensor_data_send(PacketSerial& _PacketSerial, enum pkt_type type, float data);
@@ -43,6 +46,11 @@ typedef struct {
     float humidity;
     float temperature;
 } AHTData;
+
+typedef struct {
+    int16_t rawppb;
+    float rawppm;
+} OzoneData;
 
 typedef struct {
     uint16_t srawVoc;
@@ -57,18 +65,21 @@ typedef struct {
 
 
 /************************ aht  temp & humidity ****************************/
-
 void sensor_aht_init(void);
 bool sensor_aht_get(AHTData& data);
 void sensor_aht_print(const AHTData& data);
-/************************ sgp40 tvoc  ****************************/
 
+/************************ aht  temp & humidity ****************************/
+void sensor_ozone_init(void);
+bool sensor_ozone_get(OzoneData& data);
+void sensor_ozone_print(const OzoneData& data);
+
+/************************ sgp40 tvoc  ****************************/
 void sensor_sgp40_init(void);
 bool sensor_sgp40_get(SPG40Data& data, const uint16_t compensationRh, const uint16_t compensationT);
 void sensor_sgp40_print(const SPG40Data& data);
 
 /************************ scd4x  co2 ****************************/
-
 void sensor_scd4x_init(void);
 bool sensor_scd4x_get(SCD4XData& data);
 void sensor_scd4x_print(const SCD4XData& data);

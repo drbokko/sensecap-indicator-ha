@@ -76,6 +76,7 @@ static void format_sensor_data(char* buf, enum sensor_data_type sensor_type, con
 			format_style = "%.1f";
 			break;
 		case SCD41_SENSOR_CO2:
+		case OZONE_SENSOR_PPM:
 		case SGP40_SENSOR_TVOC:
 		case SHT41_SENSOR_HUMIDITY:
 		default:
@@ -108,6 +109,11 @@ void view_sensor_init() {
 	sensorPanel[SHT41_SENSOR_TEMP].ui_lbl = (lv_obj_t*)malloc(sizeof(lv_obj_t*) * 1);
 	sensorPanel[SHT41_SENSOR_TEMP].ui_lbl[0] = ui_sensor_data_temp_1;
 	//sensorPanel[SHT41_SENSOR_TEMP].ui_lbl[1] = ui_sensor_data_temp_2;
+
+	sensorPanel[OZONE_SENSOR_PPM].ui_lbl_size = 1;
+	sensorPanel[OZONE_SENSOR_PPM].ui_lbl = (lv_obj_t*)malloc(sizeof(lv_obj_t*) * 1);
+	sensorPanel[OZONE_SENSOR_PPM].ui_lbl[0] = ui_sensor_data_ozone_1;
+	//sensorPanel[OZONE_SENSOR_PPM].ui_lbl[1] = ui_sensor_data_temp_2;
 
 	sensorPanel[SHT41_SENSOR_HUMIDITY].ui_lbl_size = 1;
 	sensorPanel[SHT41_SENSOR_HUMIDITY].ui_lbl = (lv_obj_t*)malloc(sizeof(lv_obj_t*) * 1);

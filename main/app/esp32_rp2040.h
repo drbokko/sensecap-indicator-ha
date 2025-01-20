@@ -54,6 +54,10 @@ enum pkt_type_data
 	PKT_TYPE_SENSOR_SFA3X_HCHO = 0xBE,
 	PKT_TYPE_SENSOR_SFA3X_HUMIDITY = 0xBF,
 	PKT_TYPE_SENSOR_SFA3X_TEMP = 0xC0,
+
+	// DFRobot Winsen ZE27-O3 Ozone Sensor
+	PKT_TYPE_SENSOR_DFROBOT_OZONE_PPM = 0xD0,
+
 };
 
 void esp32_rp2040_init(void);

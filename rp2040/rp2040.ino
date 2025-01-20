@@ -82,6 +82,7 @@ void setup()
     sensor_aht_init();
     sensor_sgp40_init();
     sensor_scd4x_init();
+    sensor_ozone_init();
 }
 
 /*************************** delay *****************************/
@@ -89,11 +90,13 @@ void setup()
 NonBlockingDelay aht_delay(2000);  //
 NonBlockingDelay sgp40_delay(3800);  // Tvoc
 NonBlockingDelay scd4x_delay(3800);  // CO2 Above 3500 would be good
+NonBlockingDelay ozone_delay(3000);  //
 
 /*************************** data to send *****************************/
 AHTData   data_aht = {0};
 SPG40Data data_spg = {0};
 SCD4XData data_scd = {0};
+OzoneData data_ozone = {0};
 
 /************************ compensation  ****************************/
 uint16_t defaultCompenstaionRh = 0x8000;
@@ -144,6 +147,13 @@ void loop()
         // get the vocIndex from SPG40
         float voxIndex = calibrateSensor(static_cast<float>(data_spg.vocIndex));
         sensor_data_send(packetSerial, PKT_TYPE_SENSOR_SGP40_TVOC_INDEX, voxIndex);
+    }
+    
+    if (ozone_delay.check() && sensor_ozone_get(data_ozone)) {  // External Sensor
+        sensor_ozone_print(data_ozone);
+        float ozonePPM = static_cast<float>(data_ozone.rawppm);
+        sensor_data_send(packetSerial, PKT_TYPE_SENSOR_DFROBOT_OZONE_PPM, ozonePPM);
+
     }
 
     if (aht_delay.check() && sensor_aht_get(data_aht)) {  // External Sensor

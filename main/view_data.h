@@ -110,6 +110,7 @@ struct sensor_data_minmax
 	X(SGP40_SENSOR_TVOC, "SGP40_TVOC")         \
 	X(SHT41_SENSOR_TEMP, "SHT41_TEMP")         \
 	X(SHT41_SENSOR_HUMIDITY, "SHT41_HUMIDITY") \
+	X(OZONE_SENSOR_PPM, "OZONE_PPM") \
 
 #define X(type, str) type,
 enum sensor_data_type
