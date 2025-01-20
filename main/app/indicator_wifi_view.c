@@ -511,7 +511,7 @@ static void __view_event_handler(void* handler_args, esp_event_base_t base, int3
 			}
 			/*update wifi signal status*/
 			lv_img_set_src(ui_wifi_st_0, (void*)p_src);
-			lv_img_set_src(ui_wifi_st_1, (void*)p_src);
+			// lv_img_set_src(ui_wifi_st_1, (void*)p_src);
 			lv_img_set_src(ui_wifi_st_2, (void*)p_src);
 			lv_img_set_src(ui_wifi_st_3, (void*)p_src);
 			lv_img_set_src(ui_wifi_st_4, (void*)p_src);

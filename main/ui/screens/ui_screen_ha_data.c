@@ -283,7 +283,7 @@ lv_obj_set_style_bg_color(ui_sensor5_btn1, lv_color_hex(0x282828), LV_PART_MAIN 
 lv_obj_set_style_bg_opa(ui_sensor5_btn1, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
 
 ui_sensor3_logo2 = lv_img_create(ui_sensor5_btn1);
-lv_img_set_src(ui_sensor3_logo2, &ui_img_ic_tvoc_png);
+lv_img_set_src(ui_sensor3_logo2, &ui_img_ic_o3_png);
 lv_obj_set_width( ui_sensor3_logo2, LV_SIZE_CONTENT);  /// 45
 lv_obj_set_height( ui_sensor3_logo2, LV_SIZE_CONTENT);   /// 45
 lv_obj_set_x( ui_sensor3_logo2, -8 );
@@ -320,7 +320,7 @@ lv_obj_set_width( ui_sensor5_unit1, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_sensor5_unit1, LV_SIZE_CONTENT);   /// 1
 lv_obj_set_x( ui_sensor5_unit1, 134 );
 lv_obj_set_y( ui_sensor5_unit1, 51 );
-lv_label_set_text(ui_sensor5_unit1,"index");
+lv_label_set_text(ui_sensor5_unit1,"ppm");
 lv_label_set_recolor(ui_sensor5_unit1,"true");
 lv_obj_set_style_text_color(ui_sensor5_unit1, lv_color_hex(0xB43CAC), LV_PART_MAIN | LV_STATE_DEFAULT );
 lv_obj_set_style_text_opa(ui_sensor5_unit1, 255, LV_PART_MAIN| LV_STATE_DEFAULT);

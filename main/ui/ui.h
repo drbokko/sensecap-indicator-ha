@@ -15,30 +15,6 @@ extern "C" {
 #include "ui_helpers.h"
 #include "ui_events.h"
 
-// SCREEN: ui_screen_ha_mix
-void ui_screen_ha_mix_screen_init(void);
-void ui_event_screen_ha_mix( lv_event_t * e);
-extern lv_obj_t *ui_screen_ha_mix;
-void ui_event_switch1( lv_event_t * e);
-extern lv_obj_t *ui_switch1;
-extern lv_obj_t *ui_switch1_logo1;
-extern lv_obj_t *ui_switch1_label1;
-void ui_event_switch2( lv_event_t * e);
-extern lv_obj_t *ui_switch2;
-extern lv_obj_t *ui_switch2_logo1;
-extern lv_obj_t *ui_switch2_label1;
-extern lv_obj_t *ui_switch_btn3;
-extern lv_obj_t *ui_switch3_label1;
-void ui_event_switch3( lv_event_t * e);
-extern lv_obj_t *ui_switch3;
-extern lv_obj_t *ui_panel_top_2;
-extern lv_obj_t *ui_time_ha_data1;
-extern lv_obj_t *ui_screen_home_data_label2;
-void ui_event_wifi__st_button_ha_data1( lv_event_t * e);
-extern lv_obj_t *ui_wifi__st_button_ha_data1;
-extern lv_obj_t *ui_wifi_st_1;
-// CUSTOM VARIABLES
-
 // SCREEN: ui_screen_ha_data
 void ui_screen_ha_data_screen_init(void);
 void ui_event_screen_ha_data( lv_event_t * e);
@@ -147,6 +123,7 @@ extern lv_obj_t *ui_panel_top_5;
 void ui_event_back_wifi( lv_event_t * e);
 extern lv_obj_t *ui_back_wifi;
 extern lv_obj_t *ui_screen_home_data_label4;
+void ui_event_wifi__st_button_ha_data4( lv_event_t * e);
 extern lv_obj_t *ui_wifi__st_button_ha_data4;
 extern lv_obj_t *ui_wifi_st_0;
 extern lv_obj_t *ui_wifi_scan_wait;
@@ -206,15 +183,16 @@ extern lv_obj_t *ui_Keyboard_ip;
 extern lv_obj_t *ui____initial_actions0;
 
 // IMAGES AND IMAGE SETS
-LV_IMG_DECLARE( ui_img_ic_switch2_on_png);   // assets/ic_switch2_on.png
-LV_IMG_DECLARE( ui_img_ic_switch2_off_png);   // assets/ic_switch2_off.png
-LV_IMG_DECLARE( ui_img_ic_switch1_on_png);   // assets/ic_switch1_on.png
-LV_IMG_DECLARE( ui_img_ic_switch1_off_png);   // assets/ic_switch1_off.png
 LV_IMG_DECLARE( ui_img_wifi_disconet_png);   // assets/wifi_disconet.png
 LV_IMG_DECLARE( ui_img_ic_temp_png);   // assets/ic_temp.png
 LV_IMG_DECLARE( ui_img_ic_hum_png);   // assets/ic_hum.png
 LV_IMG_DECLARE( ui_img_ic_tvoc_png);   // assets/ic_tVOC.png
 LV_IMG_DECLARE( ui_img_ic_co2_png);   // assets/ic_co2.png
+LV_IMG_DECLARE( ui_img_ic_o3_png);   // assets/ic_o3.png
+LV_IMG_DECLARE( ui_img_ic_switch2_on_png);   // assets/ic_switch2_on.png
+LV_IMG_DECLARE( ui_img_ic_switch2_off_png);   // assets/ic_switch2_off.png
+LV_IMG_DECLARE( ui_img_ic_switch1_on_png);   // assets/ic_switch1_on.png
+LV_IMG_DECLARE( ui_img_ic_switch1_off_png);   // assets/ic_switch1_off.png
 LV_IMG_DECLARE( ui_img_setting_png);   // assets/setting.png
 LV_IMG_DECLARE( ui_img_wifi_setting_png);   // assets/wifi_setting.png
 LV_IMG_DECLARE( ui_img_display_png);   // assets/display.png

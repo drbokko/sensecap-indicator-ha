@@ -100,9 +100,9 @@ static void update_switch_ui(int index, int value) {
 
     lv_obj_t* target = NULL;
     switch (index) {
-        case 0: target = ui_switch1; break;
-        case 1: target = ui_switch2; break;
-        case 2: target = ui_switch3; break;
+        // case 0: target = ui_switch1; break;
+        // case 1: target = ui_switch2; break;
+        // case 2: target = ui_switch3; break;
         case 3: target = ui_switch4; break;
         case 4: target = ui_switch5_arc1; break;
         case 5: target = ui_switch6; break;

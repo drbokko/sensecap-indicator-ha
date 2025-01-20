@@ -72,11 +72,13 @@ static void format_sensor_data(char* buf, enum sensor_data_type sensor_type, con
 
 	switch(sensor_type)
 	{
+		case OZONE_SENSOR_PPM:
+			format_style = "%.2f";
+			break;
 		case SHT41_SENSOR_TEMP:
 			format_style = "%.1f";
 			break;
 		case SCD41_SENSOR_CO2:
-		case OZONE_SENSOR_PPM:
 		case SGP40_SENSOR_TVOC:
 		case SHT41_SENSOR_HUMIDITY:
 		default:

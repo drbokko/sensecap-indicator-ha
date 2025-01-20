@@ -23,10 +23,11 @@ void switch_event_cb(lv_event_t* e) {
         .index = -1
     };
 
-    if (target == ui_switch1) switch_data.index = 0;
-    else if (target == ui_switch2) switch_data.index = 1;
-    else if (target == ui_switch3) switch_data.index = 2;
-    else if (target == ui_switch4) switch_data.index = 3;
+    // if (target == ui_switch1) switch_data.index = 0;
+    // else if (target == ui_switch2) switch_data.index = 1;
+    // else if (target == ui_switch3) switch_data.index = 2;
+    // else
+    if (target == ui_switch4) switch_data.index = 3;
     else if (target == ui_switch6) switch_data.index = 5;
     else if (target == ui_switch7) switch_data.index = 6;
     else {

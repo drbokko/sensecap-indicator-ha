@@ -80,6 +80,7 @@ lv_obj_add_flag( ui_temp_image1, LV_OBJ_FLAG_HIDDEN | LV_OBJ_FLAG_ADV_HITTEST );
 lv_obj_clear_flag( ui_temp_image1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
 
 lv_obj_add_event_cb(ui_back_wifi, ui_event_back_wifi, LV_EVENT_ALL, NULL);
+lv_obj_add_event_cb(ui_wifi__st_button_ha_data4, ui_event_wifi__st_button_ha_data4, LV_EVENT_ALL, NULL);
 lv_obj_add_event_cb(ui_screen_wifi, ui_event_screen_wifi, LV_EVENT_ALL, NULL);
 
 }
